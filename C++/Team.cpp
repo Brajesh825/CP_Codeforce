@@ -1,20 +1,23 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int main(){
-	int n,minCapacity=0,currCapacity=0;
+
+	int n,sum=0;
 	cin>>n;
 
-	while(n>1){
-		int exit,enter;
-		cin>>exit>>enter;
-
-		currCapacity-=exit;
-		currCapacity+=enter;
-
-		if(currCapacity>minCapacity)
-			minCapacity=currCapacity;
-		n--;
+	while(n--){
+		int temp=0;
+		for(int i=0;i<3;i++)
+		{
+			int x;
+			cin>>x;
+			if(x==1)
+				temp++;
+		}
+		if(temp>=2){
+			sum++;
+		}
 	}
-	cout<<minCapacity;
+	cout<<sum;
 }
