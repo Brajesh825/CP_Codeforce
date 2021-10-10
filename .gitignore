@@ -2,7 +2,7 @@
 *.in
 *.out
 *.txt
-C++/a.out
-C++/input.in
-C++/output.out
-C++/runfile
+/C++/a.out
+/C++/input.in
+/C++/output.out
+/C++/runfile
