@@ -1,4 +1,8 @@
-#define fastread()      (ios_base:: sync_with_stdio(false),cin.tie(NULL));
+#include<iostream>
+using namespace std;
+
+#define fastread()      (ios_base::sync_with_stdio(false),cin.tie(NULL));
+
 void fastscan(int &x)
     {
         bool neg=false;
@@ -15,3 +19,8 @@ void fastscan(int &x)
         if(neg)
             x *=-1;
    }
+
+int main()
+{
+    
+}
