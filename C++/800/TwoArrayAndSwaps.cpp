@@ -1,54 +1,53 @@
 #include<bits/stdc++.h>
+#define ll                    long long int
+#define pb                    push_back
+#define F                     first
+#define S                     second
+#define mp                    make_pair
+#define MOD                   1000000007
+#define vi                    vector<int>
+#define vll                   vector<ll>
+#define pll                   pair<ll,ll>
+#define pii                   pair<int,int>
+#define all(p)                p.begin(),p.end()
+#define mid(s,e)              (s+(e-s)/2)
+#define eb                    emplace_back
+#define ull                   unsigned long long
+#define bug(x)                cout<<"  [ "#x<<" = "<<x<<" ]"<<endl;
+#define ROCK              ios_base::sync_with_stdio(0);
+#define RASENGAN              ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 using namespace std;
-
-#define fastread() (ios_base::sync_with_stdio(false),cin.tie(NULL));
-
-int sumofarray(int arr[],int size)
-{
-    int sum=0;
-    for (int i = 0; i < size; ++i)
-    {
-        sum+=arr[i];
-    }
-    return sum;
-}
-void swap(int& a,int& b)
-{
-    int temp=a;
-    a=b;
-    b=temp;
-}
 int main()
 {
-    fastread();
-    int n;
-    cin>>n;
-    while(n--)
+    ROCK
+    int t;
+    cin>>t;
+    while(t--)
     {
-        long long n,m;
+        ll n,m;
         cin>>n>>m;
-        vector<long long> a,b;
+        vll a,b;
         for(int i=0,temp;i<n;i++)
         {
             cin>>temp;
-            a.emplace_back(temp);
+            a.eb(temp);
         }
         for(int i=0,temp;i<n;i++)
         {
             cin>>temp;
-            b.emplace_back(temp);
+            b.eb(temp);
         }
-        sort(a.begin(),a.end());
-        sort(a.begin(),a.end(),greater<long long> ());
+        sort(all(a));
+        sort(all(b),greater<ll> ());
         for(int i=0;i<m;i++)
         {
             if(b[i]>a[i])
                 swap(a[i],b[i]);
         }
-        long long total=0;
+        ll total=0;
         for(int i=0;i<n;i++)
             total+=a[i];
         cout<<total<<endl;
-        
     }
+    return 0;
 }

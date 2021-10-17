@@ -20,6 +20,17 @@ void fastscan(int &x)
             x *=-1;
 }
 
+int main()
+{
+    fastread();
+}
+
+int fib(int n)
+{
+    if (n <= 1)
+        return n;
+    return fib(n-1) + fib(n-2);
+}
 bool isPrime(int n) {
   int i,f=1;
   for(i=2;i<=sqrt(n);i++)
@@ -84,14 +95,8 @@ int mininarray(int arr[],int size)
     int min=99999999;
     for (int i = 0; i < size; ++i)
     {
-        if(arr[i]<max)
+        if(arr[i]<min)
             min=arr[i];
     }
     return min;
-}
-
-
-int main()
-{
-    fastread();
 }
