@@ -100,3 +100,19 @@ int mininarray(int arr[],int size)
     }
     return min;
 }
+int Max(int a,int b)
+{
+    return a>b?a:b;
+}
+int Min(int a,int b)
+{
+    return a<b?a:b;
+}
+void display(int arr[],int count)
+{
+    for (int i = 0; i < count; ++i)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<'\n';
+}
