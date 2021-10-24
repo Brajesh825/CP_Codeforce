@@ -116,3 +116,8 @@ void display(int arr[],int count)
     }
     cout<<'\n';
 }
+
+int charToInt(char ch)
+{
+    return (int)ch-'0';
+}
