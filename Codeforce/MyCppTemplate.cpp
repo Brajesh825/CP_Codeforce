@@ -123,3 +123,31 @@ int charToInt(char ch)
 }
 
 int GCD (int a, int b){return (b == 0) ? a : GCD (b, a%b);}
+
+void merge(int arr1[],int n1,int arr2[],int n2,int arr3[])
+{
+    int l1=0,l2=0,n=0;
+    while(l1<n1 && l2<n2)
+    {
+        if(arr1[l1]<arr2[l2])
+        {
+            arr3[n]=arr1[l1];
+            n++;
+            l1++;
+        }else{
+            arr3[n]=arr2[l2];
+            n++;
+            l2++;
+        }
+    }
+    while(l1<n1){
+        arr3[n]=arr1[l1];
+        l1++;
+        n++;
+    }
+    while(l2<n2){
+        arr3[n]=arr2[l2];
+        l2++;
+        n++;
+    }
+}
