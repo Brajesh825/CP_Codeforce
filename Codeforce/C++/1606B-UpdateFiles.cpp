@@ -8,21 +8,20 @@ int main(){
     while(t--){
         ll n,k;
         cin>>n>>k;
-        n--;
+        ll computers=1;
+        ll remaining=n-1;
+        ll day=0;
 
-        ll ans=0;
-        ll curr=1;
-
-        while(n>0 && curr <=k)
+        while(remaining > 0 && computers <=k )
         {
-            ans++;
-            n-=curr;
-
-            curr = 2*curr;
+            remaining-=computers;
+            computers+=computers;
+            day++;
         }
-
-        ans+= (n+k-1)/k;
-
-        cout << ans << '\n';
+        if(remaining > 0){
+            day += (remaining+k-1LL)/k;
+        }   
+        cout<<day<<'\n';
+            
     }
 }

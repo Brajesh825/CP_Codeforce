@@ -1,6 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+typedef long long ll;
+typedef vector<ll> vll;
+
+#define log(x) std::cout << #x"=" << x << std::endl
+
 #define fastread() (ios_base::sync_with_stdio(false),cin.tie(NULL));
 
 void fastscan(int &x)

@@ -12,39 +12,12 @@ int main()
     while(t--){
         string str;
         cin>>str;
-        int n=str.length();
+       
+        if(str[0]!=str[str.length()-1]){
+           str[str.length()-1]= str[0];
+        }
 
-        ll AB=0;
-        ll BA=0;
-
-        for (int i = 0; i < n-1; ++i)
-        {
-            if(str[i] == 'a' && str[i+1] == 'b'){
-                AB++;
-            }
-        }
-        for (int i = 0; i < n-1; ++i)
-        {
-            if(str[i] == 'b' && str[i+1] == 'a'){
-                BA++;
-            }
-        }
-        if(AB==BA)
-        {
-            cout<<str<<'\n';
-        }
-        else if(AB>BA)
-        {
-            ll temp = str.find('a');
-            str[temp] = 'b';
-            cout<<str<<'\n';
-        }
-        else
-        {
-            ll temp = str.find('b');
-            str[temp] = 'a';
-            cout<<str<<'\n';
-        }
+        cout<<str<<'\n';       
 
     }
 }
