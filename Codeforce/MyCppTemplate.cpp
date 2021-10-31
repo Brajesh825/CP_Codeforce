@@ -3,10 +3,19 @@ using namespace std;
 
 typedef long long ll;
 typedef vector<ll> vll;
+#define pno cout<<"NO"<<'\n';
+#define pyes cout<<"YES"<<'\n';  
 
 #define log(x) std::cout << #x"=" << x << std::endl
 
-#define fastread() (ios_base::sync_with_stdio(false),cin.tie(NULL));
+#define CHIDORI (ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL));
+
+
+int main()
+{
+    CHIDORI
+    
+}
 
 void fastscan(int &x)
 {
@@ -23,11 +32,6 @@ void fastscan(int &x)
             x = (x<<1) + (x<<3) +c -48;
         if(neg)
             x *=-1;
-}
-
-int main()
-{
-    fastread();
 }
 
 int fib(int n)

@@ -1,11 +1,13 @@
 #include<iostream>
 using namespace std;
 #define ll long long
-#define fastread() (ios_base::sync_with_stdio(false),cin.tie(NULL));
+#define CHIDORI (ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL));
+#define pno cout<<"NO"<<'\n';
+#define pyes cout<<"YES"<<'\n';  
 
 int main()
 {
-	fastread();
+	CHIDORI
 	int t;
 	cin>>t;
 
