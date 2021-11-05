@@ -22,6 +22,5 @@ int main()
 		}
 	}
 
-
 	cout<<arr[t-1][t-1];
 }

@@ -3,29 +3,19 @@ using namespace std;
 
 int main()
 {
-	int t;
-	cin>>t;
+	int a,i=0,last=0,current=0;
+	cin>>a;
 
-	int x=0;
-
-	int arr[t+1];
-
-	arr[1]=1;
-	for (int i = 2; i <= t; ++i)
+	while(a>0)
 	{
-		arr[i]=i+arr[i-1];
-	}
+		i++;
+		current=last+i;
+		last=current;
 
-	int height=1;
-	int count=0;
-	for (int i = 1; i <=t; ++i)
-	{
-		count+=arr[i];
-		if(count>t)
-		{
-			height=i-1;
-			break;
+		a-=current;
+		if(a<0){
+			i--;
 		}
 	}
-	cout<<height<<'\n';	
+	cout<<i;
 }
